@@ -22,20 +22,18 @@ print_info(response)
 
 print('Вопрос 4')
 for method in methods:
-    params = {'method':method}
-    print(params)
+    params = {'method': method}
 
-    if method == 'GET':
-        response = requests.get(url, params=params)
-        print_info(response)
-    elif method == 'POST':
-        response = requests.post(url, data=params)
-        print_info(response)
-    elif method == 'DELETE':
-        response = requests.delete(url, data=params)
-        print_info(response)
-    elif method == 'PUT':
-        response = requests.put(url, data=params)
-        print_info(response)
-    else:
-        print('Wrong method!')
+    print('\nCheck new method parameter:', params)
+
+    response = requests.get(url, params=params)
+    print_info(response)
+
+    response = requests.post(url, data=params)
+    print_info(response)
+
+    response = requests.put(url, data=params)
+    print_info(response)
+
+    response = requests.delete(url, data=params)
+    print_info(response)
