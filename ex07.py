@@ -37,3 +37,5 @@ for method in methods:
 
     response = requests.delete(url, data=params)
     print_info(response)
+
+print('Метод DELETE отвечает успешно при method = GET!')
