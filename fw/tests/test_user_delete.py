@@ -117,5 +117,5 @@ class TestUserDelete(BaseCase):
             response5,
             'username',
             user1_username,
-            'Username was deleted by another user!'
+            f'User with id = {user1_id} was deleted by another user!'
         )
