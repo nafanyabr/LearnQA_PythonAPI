@@ -1,7 +1,9 @@
+import allure
 from lib.my_requests import MyRequests
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 
+@allure.epic("Delete user cases")
 class TestUserDelete(BaseCase):
     def test_delete_system_user(self):
         # LOGIN
